@@ -1,0 +1,29 @@
+<div>
+    Contador: <span id="contador">3</span>
+  </div>
+  <script>
+    // Obter o elemento que exibirá o contador
+var contadorElemento = document.getElementById("contador");
+
+// Definir o valor inicial do contador
+var contador = 3;
+
+// Definir a função que será executada a cada intervalo de tempo
+var intervalo = setInterval(function() {
+  // Atualizar o valor do contador
+  contador--;
+
+  // Atualizar o conteúdo do elemento para exibir o novo valor do contador
+  contadorElemento.textContent = contador;
+
+  // Verificar se o contador atingiu o valor desejado
+  if (contador == 0) {
+    // Executar código adicional aqui
+    console.log("O contador atingiu o valor 0!");
+
+    // Parar o intervalo de tempo
+    clearInterval(intervalo);
+  }
+}, 1000); // Intervalo de tempo em milissegundos (aqui é 1 segundo)
+
+  </script>
